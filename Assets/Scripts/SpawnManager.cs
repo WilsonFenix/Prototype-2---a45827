@@ -10,16 +10,12 @@ public class SpawnManager : MonoBehaviour
     private float spawnPosZ = 20;
     void Start()
     {
-        
+        InvokeRepeating("SpawnRandomAnimal", 2, 1.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SpawnRandomAnimal();
-        }
     }
     void SpawnRandomAnimal() {
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),
